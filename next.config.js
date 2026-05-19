@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   async headers() {
     return [
       {
@@ -11,7 +15,18 @@ const nextConfig = {
         ]
       }
     ];
-  }
+  },
+  // Configurar rutas dinámicas para exportación estática
+  experimental: {
+    isrMemoryCacheSize: 0,
+  },
+  // Desabilitar rutas que requieren datos del servidor en tiempo de compilación
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
 };
 
 module.exports = nextConfig;
