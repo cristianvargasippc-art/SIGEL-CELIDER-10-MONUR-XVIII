@@ -1,0 +1,46 @@
+{
+  "name": "sigel-celider-10-monur-xviii",
+  "version": "1.0.0",
+  "description": "Sistema de registro y check-in para Club Escolar R10 - PLE-RD.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianvargasippc-art/SIGEL-CELIDER-10-MONUR-XVIII.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cristianvargasippc-art/SIGEL-CELIDER-10-MONUR-XVIII/issues"
+  },
+  "homepage": "https://github.com/cristianvargasippc-art/SIGEL-CELIDER-10-MONUR-XVIII#readme",
+  "dependencies": {
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.106.0",
+    "autoprefixer": "^10.5.0",
+    "next": "^14.2.35",
+    "postcss": "^8.5.14",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^6.12.3",
+    "xlsx": "^0.18.5",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3"
+  }
+}

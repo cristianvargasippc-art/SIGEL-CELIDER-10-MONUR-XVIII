@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --navy: #0d2b5e;
+  --sky: #7db8d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f9fc;
+  color: var(--navy);
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+.field {
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-skyInstitutional focus:ring-2 focus:ring-skyInstitutional/40;
+}
+
+.label {
+  @apply mb-1 block text-sm font-semibold text-navy;
+}
+
+.primary-button {
+  @apply inline-flex items-center justify-center rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-[#123a78] disabled:cursor-not-allowed disabled:bg-slate-400;
+}
+
+.secondary-button {
+  @apply inline-flex items-center justify-center rounded-md border border-navy bg-white px-4 py-2 text-sm font-semibold text-navy transition hover:bg-skyInstitutional/15 disabled:cursor-not-allowed disabled:border-slate-300 disabled:text-slate-400;
+}
