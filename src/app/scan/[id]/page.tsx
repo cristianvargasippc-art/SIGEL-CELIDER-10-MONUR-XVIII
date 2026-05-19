@@ -2,6 +2,18 @@ import { notFound } from "next/navigation";
 import ScanPage from "@/components/ScanPage";
 import { getSupabaseAdmin } from "@/lib/supabase-server";
 
+export async function generateStaticParams() {
+  const { data, error } = await getSupabaseAdmin()
+    .from("registros")
+    .select("id");
+
+  if (error || !data) return [];
+
+  return data.map((record) => ({
+    id: record.id,
+  }));
+}
+
 export default async function ScanRoutePage({ params }: { params: { id: string } }) {
   const { data, error } = await getSupabaseAdmin()
     .from("registros")
